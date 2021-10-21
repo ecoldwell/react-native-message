@@ -24,6 +24,10 @@
 		E8A1AA692717568400CD43F4 /* MessagesModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A1AA682717568400CD43F4 /* MessagesModule.m */; };
 		E8D05E4F271DE828006E0CCF /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D05E4E271DE828006E0CCF /* KeyboardViewController.swift */; };
 		E8D05E53271DE828006E0CCF /* Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E8D05E4C271DE828006E0CCF /* Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E8E474752722026E008B1379 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E474742722026E008B1379 /* KeyboardViewController.swift */; };
+		E8E474792722026E008B1379 /* Ojii.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E8E474722722026E008B1379 /* Ojii.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E8F5A82A2721F5A6008EF71C /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = E8F5A8292721F5A6008EF71C /* KeyboardKit */; };
+		E8F5A8322721F71B008EF71C /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F5A8312721F71B008EF71C /* KeyboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,13 @@
 			remoteGlobalIDString = E8D05E4B271DE828006E0CCF;
 			remoteInfo = Keyboard;
 		};
+		E8E474772722026E008B1379 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8E474712722026E008B1379;
+			remoteInfo = Ojii;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +68,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				E8E474792722026E008B1379 /* Ojii.appex in Embed App Extensions */,
 				E88CF1EC2717520900D15111 /* MessagesExtension.appex in Embed App Extensions */,
 				E8D05E53271DE828006E0CCF /* Keyboard.appex in Embed App Extensions */,
 			);
@@ -96,6 +108,10 @@
 		E8D05E4C271DE828006E0CCF /* Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Keyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D05E4E271DE828006E0CCF /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		E8D05E50271DE828006E0CCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8E474722722026E008B1379 /* Ojii.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Ojii.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8E474742722026E008B1379 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		E8E474762722026E008B1379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8F5A8312721F71B008EF71C /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F6DAC1253BD5438C10CB389A /* Pods-InputDemoApp-InputDemoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InputDemoApp-InputDemoAppTests.release.xcconfig"; path = "Target Support Files/Pods-InputDemoApp-InputDemoAppTests/Pods-InputDemoApp-InputDemoAppTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +143,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E8D05E49271DE828006E0CCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8F5A82A2721F5A6008EF71C /* KeyboardKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8E4746F2722026E008B1379 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -206,6 +230,7 @@
 				00E356EF1AD99517003FC87E /* InputDemoAppTests */,
 				E88CF1E12717520100D15111 /* MessagesExtension */,
 				E8D05E4D271DE828006E0CCF /* Keyboard */,
+				E8E474732722026E008B1379 /* Ojii */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				21353B340489FD2B5FD8F421 /* Pods */,
@@ -222,6 +247,7 @@
 				00E356EE1AD99517003FC87E /* InputDemoAppTests.xctest */,
 				E88CF1DF2717520100D15111 /* MessagesExtension.appex */,
 				E8D05E4C271DE828006E0CCF /* Keyboard.appex */,
+				E8E474722722026E008B1379 /* Ojii.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -245,8 +271,18 @@
 			children = (
 				E8D05E4E271DE828006E0CCF /* KeyboardViewController.swift */,
 				E8D05E50271DE828006E0CCF /* Info.plist */,
+				E8F5A8312721F71B008EF71C /* KeyboardView.swift */,
 			);
 			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		E8E474732722026E008B1379 /* Ojii */ = {
+			isa = PBXGroup;
+			children = (
+				E8E474742722026E008B1379 /* KeyboardViewController.swift */,
+				E8E474762722026E008B1379 /* Info.plist */,
+			);
+			path = Ojii;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,8 +326,11 @@
 			dependencies = (
 				E88CF1EB2717520900D15111 /* PBXTargetDependency */,
 				E8D05E52271DE828006E0CCF /* PBXTargetDependency */,
+				E8E474782722026E008B1379 /* PBXTargetDependency */,
 			);
 			name = InputDemoApp;
+			packageProductDependencies = (
+			);
 			productName = InputDemoApp;
 			productReference = 13B07F961A680F5B00A75B9A /* InputDemoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -328,8 +367,28 @@
 			dependencies = (
 			);
 			name = Keyboard;
+			packageProductDependencies = (
+				E8F5A8292721F5A6008EF71C /* KeyboardKit */,
+			);
 			productName = Keyboard;
 			productReference = E8D05E4C271DE828006E0CCF /* Keyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		E8E474712722026E008B1379 /* Ojii */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8E4747C2722026E008B1379 /* Build configuration list for PBXNativeTarget "Ojii" */;
+			buildPhases = (
+				E8E4746E2722026E008B1379 /* Sources */,
+				E8E4746F2722026E008B1379 /* Frameworks */,
+				E8E474702722026E008B1379 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ojii;
+			productName = Ojii;
+			productReference = E8E474722722026E008B1379 /* Ojii.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -354,6 +413,9 @@
 					E8D05E4B271DE828006E0CCF = {
 						CreatedOnToolsVersion = 12.4;
 					};
+					E8E474712722026E008B1379 = {
+						CreatedOnToolsVersion = 12.4;
+					};
 				};
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "InputDemoApp" */;
@@ -365,6 +427,9 @@
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
+			packageReferences = (
+				E8F5A8282721F5A6008EF71C /* XCRemoteSwiftPackageReference "KeyboardKit" */,
+			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -373,6 +438,7 @@
 				00E356ED1AD99517003FC87E /* InputDemoAppTests */,
 				E88CF1DE2717520100D15111 /* MessagesExtension */,
 				E8D05E4B271DE828006E0CCF /* Keyboard */,
+				E8E474712722026E008B1379 /* Ojii */,
 			);
 		};
 /* End PBXProject section */
@@ -404,6 +470,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E8D05E4A271DE828006E0CCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8E474702722026E008B1379 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -598,6 +671,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8D05E4F271DE828006E0CCF /* KeyboardViewController.swift in Sources */,
+				E8F5A8322721F71B008EF71C /* KeyboardView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8E4746E2722026E008B1379 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8E474752722026E008B1379 /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,6 +700,11 @@
 			isa = PBXTargetDependency;
 			target = E8D05E4B271DE828006E0CCF /* Keyboard */;
 			targetProxy = E8D05E51271DE828006E0CCF /* PBXContainerItemProxy */;
+		};
+		E8E474782722026E008B1379 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8E474712722026E008B1379 /* Ojii */;
+			targetProxy = E8E474772722026E008B1379 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -992,6 +1079,69 @@
 			};
 			name = Release;
 		};
+		E8E4747A2722026E008B1379 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Ojii/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.InputDemoApp.Ojii;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E8E4747B2722026E008B1379 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Ojii/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.InputDemoApp.Ojii;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1040,7 +1190,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		E8E4747C2722026E008B1379 /* Build configuration list for PBXNativeTarget "Ojii" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8E4747A2722026E008B1379 /* Debug */,
+				E8E4747B2722026E008B1379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E8F5A8282721F5A6008EF71C /* XCRemoteSwiftPackageReference "KeyboardKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/KeyboardKit/KeyboardKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E8F5A8292721F5A6008EF71C /* KeyboardKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E8F5A8282721F5A6008EF71C /* XCRemoteSwiftPackageReference "KeyboardKit" */;
+			productName = KeyboardKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
 }
