@@ -18,7 +18,7 @@ const {MessagesModule} = NativeModules;
 type Sticker = {name: string; source: number};
 
 const stickers: Sticker[] = [
-  {name: 'apple', source: require('./stickers/apple.png')},
+  {name: 'apple', source: require('./gifs/Angry(015).gif')},
   {name: 'avocado', source: require('./stickers/avocado.png')},
   {name: 'banana', source: require('./stickers/banana.png')},
   {name: 'blueberries', source: require('./stickers/blueberries.png')},
