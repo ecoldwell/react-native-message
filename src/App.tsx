@@ -14,6 +14,7 @@ const green = '#34c759';
 const App: FunctionComponent = () => {
   return (
     <>
+  
       <View style={styles.header}>
         <StatusBar
           translucent={Platform.OS === 'ios'}

@@ -1,13 +1,13 @@
 //
 //  KeyboardViewController.swift
-//  Ojii
+//  ReallyCustom
 //
-//  Created by Nomads on 2021-10-21.
+//  Created by Nomads on 2021-10-26.
 //
 
 import UIKit
 
-class KeyboardViewController: UIInputViewController, RCTBridgeDelegate {
+class KeyboardViewController: UIInputViewController {
 
     @IBOutlet var nextKeyboardButton: UIButton!
     
@@ -16,7 +16,7 @@ class KeyboardViewController: UIInputViewController, RCTBridgeDelegate {
         
         // Add custom view sizing constraints here
     }
-  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,7 +46,7 @@ class KeyboardViewController: UIInputViewController, RCTBridgeDelegate {
     
     override func textDidChange(_ textInput: UITextInput?) {
         // The app has just changed the document's contents, the document context has been updated.
-        textDocumentProxy.insertText("Hello world.")
+        
         var textColor: UIColor
         let proxy = self.textDocumentProxy
         if proxy.keyboardAppearance == UIKeyboardAppearance.dark {
@@ -56,13 +56,5 @@ class KeyboardViewController: UIInputViewController, RCTBridgeDelegate {
         }
         self.nextKeyboardButton.setTitleColor(textColor, for: [])
     }
-  
-
-  func sourceURL(for bridge: RCTBridge!) -> URL! {
-    RCTBundleURLProvider.sharedSettings()?
-      .jsBundleURL(forBundleRoot: "index.stickers", fallbackResource: nil)
-  }
-
-
 
 }

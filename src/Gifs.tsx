@@ -10,6 +10,7 @@ import {
   Text,
   View,
 } from 'react-native';
+import NavigationMenu from './Navigation'
 
 
 
@@ -54,7 +55,7 @@ const stickers: Sticker[] = [
 
 
 
-const Stickers: FunctionComponent = () => {
+const Gifs: FunctionComponent = () => {
   const sendSticker = useCallback(async (sticker: Sticker) => {
     const {uri} = Image.resolveAssetSource(sticker.source);
     try {
@@ -85,7 +86,8 @@ const Stickers: FunctionComponent = () => {
   return (
     <SafeAreaView style={styles.root}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>Ojiis</Text>
+        
+        <Text style={styles.headerText}>Ojiis Gifs</Text>
       </View>
       <FlatList style={styles.stickerContainer}
         data={stickers}
@@ -102,7 +104,7 @@ const Stickers: FunctionComponent = () => {
 const styles = StyleSheet.create({
   root: {
     alignItems: 'center',
-    backgroundColor: '#007DFF'
+    backgroundColor: 'red'
   },
   stickerContainer: {
     width: '100%',
@@ -131,4 +133,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Stickers;
+export default Gifs;

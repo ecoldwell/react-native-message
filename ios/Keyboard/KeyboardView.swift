@@ -7,7 +7,7 @@
 
 import Foundation
 import SwiftUI
-import KeyboardKit
+
 
 /**
  This view is the main view that is used by the extension by
