@@ -18,38 +18,40 @@ const {MessagesModule} = NativeModules;
 type Sticker = {name: string; source: number};
 
 const stickers: Sticker[] = [
-  {name: 'apple', source: require('./gifs/Angry(015).gif')},
-  {name: 'avocado', source: require('./stickers/avocado.png')},
-  {name: 'banana', source: require('./stickers/banana.png')},
-  {name: 'blueberries', source: require('./stickers/blueberries.png')},
-  {name: 'cherries', source: require('./stickers/cherries.png')},
-  {name: 'coconut', source: require('./stickers/coconut.png')},
-  {name: 'grapes', source: require('./stickers/grapes.png')},
-  {name: 'lemon', source: require('./stickers/lemon.png')},
-  {name: 'mango', source: require('./stickers/mango.png')},
-  {name: 'melon', source: require('./stickers/melon.png')},
-  {name: 'olive', source: require('./stickers/olive.png')},
-  {name: 'pear', source: require('./stickers/pear.png')},
-  {name: 'pineapple', source: require('./stickers/pineapple.png')},
-  {name: 'strawberry', source: require('./stickers/strawberry.png')},
-  {name: 'tangerine', source: require('./stickers/tangerine.png')},
-  {name: 'tomato', source: require('./stickers/tomato.png')},
-  {name: 'apple', source: require('./stickers/apple.png')},
-  {name: 'avocado', source: require('./stickers/avocado.png')},
-  {name: 'banana', source: require('./stickers/banana.png')},
-  {name: 'blueberries', source: require('./stickers/blueberries.png')},
-  {name: 'cherries', source: require('./stickers/cherries.png')},
-  {name: 'coconut', source: require('./stickers/coconut.png')},
-  {name: 'grapes', source: require('./stickers/grapes.png')},
-  {name: 'lemon', source: require('./stickers/lemon.png')},
-  {name: 'mango', source: require('./stickers/mango.png')},
-  {name: 'melon', source: require('./stickers/melon.png')},
-  {name: 'olive', source: require('./stickers/olive.png')},
-  {name: 'pear', source: require('./stickers/pear.png')},
-  {name: 'pineapple', source: require('./stickers/pineapple.png')},
-  {name: 'strawberry', source: require('./stickers/strawberry.png')},
-  {name: 'tangerine', source: require('./stickers/tangerine.png')},
-  {name: 'tomato', source: require('./stickers/tomato.png')},
+  // {name: 'apple', source: require('./stickers/#1(057).png')},
+  {name: 'avocado', source: require('./stickers/Aha!(093).png')},
+  {name: 'banana', source: require('./stickers/Alien(048).png')},
+  {name: 'blueberries', source: require('./stickers/AmericanFootball(101).png')},
+  {name: 'cherries', source: require('./stickers/Angry(015).png')},
+  {name: 'coconut', source: require('./stickers/AngryDevil(033).png')},
+  {name: 'grapes', source: require('./stickers/Balloon(103).png')},
+  {name: 'lemon', source: require('./stickers/Baseball(099).png')},
+  {name: 'mango', source: require('./stickers/Basketball(100).png')},
+  {name: 'melon', source: require('./stickers/Bored(133).png')},
+  {name: 'olive', source: require('./stickers/Crazy(146).png')},
+  {name: 'pear', source: require('./stickers/CoolGuy(053).png')},
+  {name: 'pineapple', source: require('./stickers/Dancing(085).png')},
+  {name: 'strawberry', source: require('./stickers/Sad(014).png')},
+  {name: 'tangerine', source: require('./stickers/Santa(105).png')},
+  {name: 'tomato', source: require('./stickers/Sick(031).png')},
+  // {name: 'wow', source: require('./stickers/#1(057).png')},
+  {name: 'avocado', source: require('./stickers/Aha!(093).png')},
+  {name: 'banana', source: require('./stickers/Alien(048).png')},
+  {name: 'blueberries', source: require('./stickers/AmericanFootball(101).png')},
+  {name: 'cherries', source: require('./stickers/Angry(015).png')},
+  {name: 'coconut', source: require('./stickers/AngryDevil(033).png')},
+  {name: 'grapes', source: require('./stickers/Balloon(103).png')},
+  {name: 'lemon', source: require('./stickers/Baseball(099).png')},
+  {name: 'mango', source: require('./stickers/Basketball(100).png')},
+  {name: 'melon', source: require('./stickers/Bored(133).png')},
+  {name: 'olive', source: require('./stickers/Crazy(146).png')},
+  {name: 'pear', source: require('./stickers/CoolGuy(053).png')},
+  {name: 'pineapple', source: require('./stickers/Dancing(085).png')},
+  {name: 'strawberry', source: require('./stickers/Sad(014).png')},
+  {name: 'tangerine', source: require('./stickers/Santa(105).png')},
+  {name: 'tomato', source: require('./stickers/Sick(031).png')},
+  {name: 'tomato', source: require('./stickers/Sick(031).png')},
+  {name: 'strawberry', source: require('./stickers/Sad(014).png')},
 ];
 
 
@@ -84,16 +86,16 @@ const Stickers: FunctionComponent = () => {
 
   return (
     <SafeAreaView style={styles.root}>
-      <View style={styles.header}>
+      {/* <View style={styles.header}>
         <Text style={styles.headerText}>Ojiis</Text>
-      </View>
+      </View> */}
       <FlatList style={styles.stickerContainer}
         data={stickers}
         renderItem={renderSticker}
         keyExtractor={getKey}
-        numColumns={6}
+        numColumns={7}
         showsVerticalScrollIndicator={false}
-        testID="pack-details-stickers"
+        testID="pack-details-stickers-stickers"
       />
     </SafeAreaView>
   );
@@ -107,8 +109,9 @@ const styles = StyleSheet.create({
   stickerContainer: {
     width: '100%',
     display: 'flex',
-    flexWrap: 'wrap',
-    height: '100%'
+    // flexWrap: 'wrap',
+    height: '100%',
+    paddingTop: 5
     // alignItems:'center',
     // justifyContent: 'center',
   },
@@ -126,8 +129,9 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   image: {
-    width: 65,
-    height: 65,
+    width: 46,
+    height: 46,
+    margin: 5
   },
 });
 

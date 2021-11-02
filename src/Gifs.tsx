@@ -37,7 +37,7 @@ const stickers: Sticker[] = [
   {name: 'tomato', source: require('./gifs/Blushing(148).gif')},
   {name: 'apple', source: require('./gifs/Bored(133).gif')},
   {name: 'avocado', source: require('./gifs/BringIt(112).gif')},
-  {name: 'banana', source: require('./gifs/Celebration(104).gif')},
+//   {name: 'banana', source: require('./gifs/Celebration(104).gif')},
   {name: 'apple', source: require('./gifs/Angry(015).gif')},
   {name: 'avocado', source: require('./gifs/Aha!(093).gif')},
   {name: 'banana', source: require('./gifs/Alien(048).gif')},
@@ -85,15 +85,15 @@ const Gifs: FunctionComponent = () => {
 
   return (
     <SafeAreaView style={styles.root}>
-      <View style={styles.header}>
+      {/* <View style={styles.header}>
         
         <Text style={styles.headerText}>Ojiis Gifs</Text>
-      </View>
+      </View> */}
       <FlatList style={styles.stickerContainer}
         data={stickers}
         renderItem={renderSticker}
         keyExtractor={getKey}
-        numColumns={6}
+        numColumns={7}
         showsVerticalScrollIndicator={false}
         testID="pack-details-stickers"
       />
@@ -110,7 +110,8 @@ const styles = StyleSheet.create({
     width: '100%',
     display: 'flex',
     flexWrap: 'wrap',
-    height: '100%'
+    height: '100%',
+    paddingTop:5,
     // alignItems:'center',
     // justifyContent: 'center',
   },
@@ -128,8 +129,8 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   image: {
-    width: 65,
-    height: 65,
+    width: 55,
+    height: 55,
   },
 });
 

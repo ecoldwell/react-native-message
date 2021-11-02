@@ -32,7 +32,7 @@ const App: FunctionComponent = () => {
           </View>
           <Text>Did you know that tomatoes are a fruit?</Text>
           <Image
-            source={require('./stickers/tomato.png')}
+            source={require('./stickers/Alien(048).png')}
             style={styles.image}
           />
         </View>
@@ -42,7 +42,7 @@ const App: FunctionComponent = () => {
           </View>
           <Text>It's summer! Time for a delicious mango sorbet!</Text>
           <Image
-            source={require('./stickers/mango.png')}
+            source={require('./stickers/Baseball(099).png')}
             style={styles.image}
           />
         </View>
@@ -55,7 +55,7 @@ const App: FunctionComponent = () => {
             the truth behind the adage!
           </Text>
           <Image
-            source={require('./stickers/apple.png')}
+            source={require('./stickers/Basketball(100).png')}
             style={styles.image}
           />
         </View>
@@ -68,15 +68,15 @@ const App: FunctionComponent = () => {
           </Text>
           <View style={styles.images}>
             <Image
-              source={require('./stickers/banana.png')}
+              source={require('./stickers/Sad(014).png')}
               style={styles.image}
             />
             <Image
-              source={require('./stickers/blueberries.png')}
+              source={require('./stickers/Kiss(020).png')}
               style={styles.image}
             />
             <Image
-              source={require('./stickers/grapes.png')}
+              source={require('./stickers/Party(003).png')}
               style={styles.image}
             />
           </View>
