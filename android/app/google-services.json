@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "490399133073",
+    "project_id": "inputdemoapp",
+    "storage_bucket": "inputdemoapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490399133073:android:2649cce1dfcb12c781fe30",
+        "android_client_info": {
+          "package_name": "com.inputdemoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490399133073-a217d15brtcnt9lb1u1m47iii0vp5ke1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc9YxK5Csp14Bg9CREZV8PcQ_rnr_M7b8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490399133073-a217d15brtcnt9lb1u1m47iii0vp5ke1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
