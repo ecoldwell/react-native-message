@@ -16,6 +16,8 @@
 		A39BD08D3A34EE3C20042925 /* libPods-InputDemoApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5087CFCD2DE7418E87D4EF40 /* libPods-InputDemoApp.a */; };
 		A96F889E59B68CEAF6BEE388 /* libPods-InputDemoApp-InputDemoAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D12E27E2192BF94E28FCBDB /* libPods-InputDemoApp-InputDemoAppTests.a */; };
 		B50513FE0A359DEB50AAF11C /* libPods-Keyboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE9714B9F15EC8917D117DC2 /* libPods-Keyboard.a */; };
+		E80138DE2735C1FA00669436 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E80138DD2735C1FA00669436 /* GoogleService-Info.plist */; };
+		E80138E62735C21300669436 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E80138E52735C21300669436 /* GoogleService-Info.plist */; };
 		E88CF1E02717520100D15111 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E3544B26A752E20019AD0E /* Messages.framework */; };
 		E88CF1E32717520100D15111 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88CF1E22717520100D15111 /* MessagesViewController.swift */; };
 		E88CF1E62717520100D15111 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E88CF1E42717520100D15111 /* MainInterface.storyboard */; };
@@ -114,6 +116,8 @@
 		977A2B49B91CC48BD0B5B1F7 /* Pods-MessagesExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessagesExtension.release.xcconfig"; path = "Target Support Files/Pods-MessagesExtension/Pods-MessagesExtension.release.xcconfig"; sourceTree = "<group>"; };
 		9DD138AEAA057AEBC9877775 /* libPods-MessagesExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MessagesExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A072AEE128565972585A9D38 /* Pods-InputDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InputDemoApp.release.xcconfig"; path = "Target Support Files/Pods-InputDemoApp/Pods-InputDemoApp.release.xcconfig"; sourceTree = "<group>"; };
+		E80138DD2735C1FA00669436 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E80138E52735C21300669436 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E88CF1DF2717520100D15111 /* MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MessagesExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88CF1E22717520100D15111 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		E88CF1E52717520100D15111 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -216,6 +220,7 @@
 		13B07FAE1A68108700A75B9A /* InputDemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				E80138DD2735C1FA00669436 /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -298,6 +303,7 @@
 		E88CF1E12717520100D15111 /* MessagesExtension */ = {
 			isa = PBXGroup;
 			children = (
+				E80138E52735C21300669436 /* GoogleService-Info.plist */,
 				E88CF1E22717520100D15111 /* MessagesViewController.swift */,
 				E88CF1E42717520100D15111 /* MainInterface.storyboard */,
 				E88CF1E72717520900D15111 /* Assets.xcassets */,
@@ -529,6 +535,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				E80138DE2735C1FA00669436 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +545,7 @@
 			files = (
 				E88CF1E82717520900D15111 /* Assets.xcassets in Resources */,
 				E88CF1E62717520100D15111 /* MainInterface.storyboard in Resources */,
+				E80138E62735C21300669436 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
