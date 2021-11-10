@@ -111,7 +111,6 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexWrap: 'wrap',
     height: '100%',
-    paddingTop:5,
     // alignItems:'center',
     // justifyContent: 'center',
   },

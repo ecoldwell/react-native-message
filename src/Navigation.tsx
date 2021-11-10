@@ -9,7 +9,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 
 import Gifs from './Gifs'
 import Stickers from './Stickers'
-import KeyboardInput from './Keyboard'
+import Letters from './Letters'
 
 
 const Tab = createMaterialTopTabNavigator();
@@ -21,6 +21,7 @@ export default function NavigationMenu() {
       <Tab.Navigator>
         <Tab.Screen name="Gifs" component={Gifs} />
         <Tab.Screen name="Stickers" component={Stickers} />
+        <Tab.Screen name="Letters" component={Letters} />
       </Tab.Navigator>
     </NavigationContainer>
 
