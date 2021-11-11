@@ -32,7 +32,7 @@ const App: FunctionComponent = () => {
           </View>
           <Text>Did you know that tomatoes are a fruit?</Text>
           <Image
-            source={require('./stickers/Alien(048).png')}
+            source= {{uri:'https://media2.giphy.com/media/MaaaYoyYTMjuIct0wD/giphy.webp' }} 
             style={styles.image}
           />
         </View>

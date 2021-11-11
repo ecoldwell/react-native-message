@@ -19,8 +19,8 @@ const {MessagesModule} = NativeModules;
 type Sticker = {name: string; source: number};
 
 const stickers: Sticker[] = [
-  {name: 'apple', source: require('./gifs/Angry(015).gif')},
-  {name: 'avocado', source: require('./gifs/Aha!(093).gif')},
+  {name: 'apple', source: {uri:'https://media2.giphy.com/media/MaaaYoyYTMjuIct0wD/giphy.webp'}},
+  {name: 'avocado', source: require('./gifs/SampleGIFImage_40kbmb.gif')},
   {name: 'banana', source: require('./gifs/Alien(048).gif')},
   {name: 'blueberries', source: require('./gifs/AmericanFootball(101).gif')},
   {name: 'cherries', source: require('./gifs/Angelic(038).gif')},
