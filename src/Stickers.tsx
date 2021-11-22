@@ -1,4 +1,4 @@
-import React, {FunctionComponent, useCallback} from 'react';
+import React, {FunctionComponent, useCallback, useEffect, useState} from 'react';
 import {
   FlatList,
   Image,
@@ -11,52 +11,53 @@ import {
   View,
 } from 'react-native';
 
-
+import database from '@react-native-firebase/database';
+import firebase from '@react-native-firebase/app';
 
 const {MessagesModule} = NativeModules;
 
 type Sticker = {name: string; source: number};
 
-const stickers: Sticker[] = [
-  // {name: 'apple', source: require('./stickers/#1(057).png')},
-  {name: 'avocado', source: require('./stickers/Aha!(093).png')},
-  {name: 'banana', source: require('./stickers/Alien(048).png')},
-  {name: 'blueberries', source: require('./stickers/AmericanFootball(101).png')},
-  {name: 'cherries', source: require('./stickers/Angry(015).png')},
-  {name: 'coconut', source: require('./stickers/AngryDevil(033).png')},
-  {name: 'grapes', source: require('./stickers/Balloon(103).png')},
-  {name: 'lemon', source: require('./stickers/Baseball(099).png')},
-  {name: 'mango', source: require('./stickers/Basketball(100).png')},
-  {name: 'melon', source: require('./stickers/Bored(133).png')},
-  {name: 'olive', source: require('./stickers/Crazy(146).png')},
-  {name: 'pear', source: require('./stickers/CoolGuy(053).png')},
-  {name: 'pineapple', source: require('./stickers/Dancing(085).png')},
-  {name: 'strawberry', source: require('./stickers/Sad(014).png')},
-  {name: 'tangerine', source: require('./stickers/Santa(105).png')},
-  {name: 'tomato', source: require('./stickers/Sick(031).png')},
-  // {name: 'wow', source: require('./stickers/#1(057).png')},
-  {name: 'avocado', source: require('./stickers/Aha!(093).png')},
-  {name: 'banana', source: require('./stickers/Alien(048).png')},
-  {name: 'blueberries', source: require('./stickers/AmericanFootball(101).png')},
-  {name: 'cherries', source: require('./stickers/Angry(015).png')},
-  {name: 'coconut', source: require('./stickers/AngryDevil(033).png')},
-  {name: 'grapes', source: require('./stickers/Balloon(103).png')},
-  {name: 'lemon', source: require('./stickers/Baseball(099).png')},
-  {name: 'mango', source: require('./stickers/Basketball(100).png')},
-  {name: 'melon', source: require('./stickers/Bored(133).png')},
-  {name: 'olive', source: require('./stickers/Crazy(146).png')},
-  {name: 'pear', source: require('./stickers/CoolGuy(053).png')},
-  {name: 'pineapple', source: require('./stickers/Dancing(085).png')},
-  {name: 'strawberry', source: require('./stickers/Sad(014).png')},
-  {name: 'tangerine', source: require('./stickers/Santa(105).png')},
-  {name: 'tomato', source: require('./stickers/Sick(031).png')},
-  {name: 'tomato', source: require('./stickers/Sick(031).png')},
-  {name: 'strawberry', source: require('./stickers/Sad(014).png')},
+var stickers: Sticker[] = [
+  // {name: '#1(057)', source: require('./stickers/#1(057).png')},
+  {name: 'Aha!(093)', source: require('./stickers/Aha!(093).png')},
+  {name: 'Alien(048)', source: require('./stickers/Alien(048).png')},
+  {name: 'AmericanFootball(101)', source: require('./stickers/AmericanFootball(101).png')},
+  {name: 'Angry(015)', source: require('./stickers/Angry(015).png')},
+  {name: 'AngryDevil(033)', source: require('./stickers/AngryDevil(033).png')},
+  {name: 'Balloon(103)', source: require('./stickers/Balloon(103).png')},
+  {name: 'Baseball(099)', source: require('./stickers/Baseball(099).png')},
+  {name: 'Basketball(100)', source: require('./stickers/Basketball(100).png')},
+  {name: 'Bored(133)', source: require('./stickers/Bored(133).png')},
+  {name: 'Crazy(146)', source: require('./stickers/Crazy(146).png')},
+  {name: 'CoolGuy(053)', source: require('./stickers/CoolGuy(053).png')},
+  {name: 'Dancing(085)', source: require('./stickers/Dancing(085).png')},
+  {name: 'Sad(014)', source: require('./stickers/Sad(014).png')},
+  {name: 'Santa(105)', source: require('./stickers/Santa(105).png')},
+  {name: 'Sick(031)', source: require('./stickers/Sick(031).png')},
 ];
 
 
+const firebaseConfig = 
+{
+  apiKey: 'AIzaSyDfGF4lPEsxoZa3iQzJQIR1p0eIJTPX8k0',
+  authDomain: '',
+  databaseURL: 'https://ojiis-8b372.firebaseio.com',
+  projectId: '',
+  storageBucket: 'ojiis-8b372.appspot.com',
+  messagingSenderId: '536725110561',
+  appId: '1:536725110561:ios:933e366504e8d0fc098860'
+}
+
+if (firebase.apps.length === 0) {
+  firebase.initializeApp(firebaseConfig);
+}
+
 
 const Stickers: FunctionComponent = () => {
+  const [isLoading, setLoading] = useState(true);
+  const [data, setData] = useState<Array<Sticker>>([]);
+
   const sendSticker = useCallback(async (sticker: Sticker) => {
     const {uri} = Image.resolveAssetSource(sticker.source);
     try {
@@ -80,8 +81,37 @@ const Stickers: FunctionComponent = () => {
   const getKey = useCallback((sticker: Sticker) => {
     return sticker.name;
   }, []);
+  
+  useEffect(() => {
 
+     database()
+      .ref('/Users/xPG640OrBaPXwLHGSEN9lOsOECI2')
+      .once('value')
+      .then(snapshot => {
+        console.log('User data: ', snapshot.val());
+        const userData = snapshot.val();
+        const purchasedOjiisStr = userData.purchasedItem.Ojiis;
+        const userOjiis: string[] = purchasedOjiisStr
+        .split(",");
+        userOjiis.splice(-1,1);
 
+        var userStickers: Sticker[] =  [];
+        stickers.forEach(function (item) {
+          // console.log(item.name);
+          userOjiis.forEach(function(ojiiName) {
+            if ( item.name == ojiiName) {
+              userStickers.push(item);
+            }
+          })
+        });
+        setData(userStickers);
+      })
+      .catch((error) => console.error(error))
+      .finally(() => { console.log("I'm here in finally"); setLoading(false); }); 
+
+      setLoading(false);
+
+  }, []);
   
 
   return (
@@ -89,14 +119,18 @@ const Stickers: FunctionComponent = () => {
       {/* <View style={styles.header}>
         <Text style={styles.headerText}>Ojiis</Text>
       </View> */}
+      {isLoading ? <Text>Loading...</Text> : 
+      (
       <FlatList style={styles.stickerContainer}
-        data={stickers}
+        // data={stickers}
+        data = {data}
         renderItem={renderSticker}
         keyExtractor={getKey}
         numColumns={7}
         showsVerticalScrollIndicator={false}
         testID="pack-details-stickers-stickers"
       />
+    )}
     </SafeAreaView>
   );
 };

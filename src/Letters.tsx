@@ -98,7 +98,7 @@ const Letters: FunctionComponent = () => {
 const styles = StyleSheet.create({
   root: {
     alignItems: 'center',
-    backgroundColor: 'red'
+    backgroundColor: '#007DFF'
   },
   stickerContainer: {
     width: '100%',
