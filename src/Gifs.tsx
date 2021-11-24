@@ -23,7 +23,7 @@ const stickers: Sticker[] = [
   {name: 'avocado', source: require('./gifs/SampleGIFImage_135kbmb.gif')},
   {name: 'banana', source: require('./gifs/SampleGIFImage_40kbmb.gif')},
   {name: 'blueberries', source: {uri: 'https://media.giphy.com/media/U6V7bUfPx4CDHvJXEc/giphy.gif'}},
-  {name: 'cherries', source: require('./gifs/Angelic(038).gif')},
+  {name: 'cherries', source: require('./gifs/Hearts.gif')},
   {name: 'coconut', source: require('./gifs/AngryDevil(033).gif')},
   {name: 'grapes', source: require('./gifs/Anxious(091).gif')},
   {name: 'lemon', source: require('./gifs/Applause(050).gif')},
@@ -111,6 +111,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexWrap: 'wrap',
     height: '100%',
+    paddingTop:10
     // alignItems:'center',
     // justifyContent: 'center',
   },
